@@ -3,21 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Alura Typer</title>
+    <title>Quick Touch</title>
     <link rel="stylesheet" href="css/libs/materialize.min.css">
     <link rel="stylesheet" href="css/libs/google-fonts.css">
     <link rel="stylesheet" href="css/estilos.css">
-
+    <link rel="stylesheet" href="css/libs/selectize.default.css">
+    <link rel="stylesheet" href="css/libs/tooltipster.bundle.min.css" />
 </head>
 
 <body>
 
     <div class="container">
-        <h1 class="center">Alura Typer</h1>
-        <p class="frase center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore
-            et dolore magna aliqua.</p>
+        <h1 class="center">Quick Touch</h1>
+        <p class="frase center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </p>
+
+        <div class="center">
+            <img src="img/spinner.gif" alt="spinner" id="spinner">
+            <p id='erro'>Ocorreu um erro, por favor tente novamente!</p>
+        </div>
         <ul class="informacoes center">
             <li>
                 <i class="small material-icons icones">description</i>
@@ -34,6 +38,30 @@
             <a class="btn-floating btn-large waves-effect wafes-light red" id="botaoReiniciar">
                 <i class="material-icons">restore</i>
             </a>
+            <a class="btn-floating btn-large waves-effect wafes-light green" id="botaoPlacar">
+                <i class="material-icons">assignment</i>
+            </a>
+            <a class="btn-floating btn-large waves-effect wafes-light blue" id="botaoFrase">
+                <i class="material-icons">shuffle</i>
+            </a>
+            <a class="btn-floating btn-large waves-effect wafes-light cyan" id="botaoFraseId">
+                <i class="material-icons">repeat_one</i>
+            </a>
+            <input type="number" id="fraseId" min="0">
+
+            <a id="botaoFraseSync" class="btn-floating btn-large waves-effect waves-light yellow tooltip" title="Sincronizado com sucesso!">
+                <i class="material-icons">swap_vert</i>
+            </a>
+        </div>
+
+
+        <div class="selectUsuarios">
+            <select id="usuarios">
+               <option value="Vitoria">Vitoria</option>
+               <option value="Ariane">Ariane</option>
+               <option value="Gustavo">Gustavo</option>
+               <option value="Jorge">Jorge</option>
+            </select>
         </div>
 
         <ul class="center">
@@ -53,7 +81,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+
                 </tbody>
             </table>
         </section>
@@ -62,6 +90,9 @@
     <script src="js/materialize.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/placar.js"></script>
+    <script src="js/frase.js"></script>
+    <script src="js/selectize.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script>
 </body>
 
 </html>
